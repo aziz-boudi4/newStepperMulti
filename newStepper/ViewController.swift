@@ -7,7 +7,8 @@
 //
 // coreAnimation layer
 //
-//BLABLABLA
+// This is the new stepper Multi
+// ToDo: User can swipe and add multiple goals in one swipe
 
 import UIKit
 import QuartzCore
