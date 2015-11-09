@@ -83,17 +83,20 @@ class ViewController: UIViewController {
 
   func handleThePan(sender: UIPanGestureRecognizer) -> Void {
 
-    if sender.isUp(circleView) {
-
-
-    } else {
-
-    }
-
-    inc(increment)
-
-
+    if sender.isDown(circleView) == true {
+      if score == 0 {
+          score = 0
+        } else {
+          inc(-1)
+        }
+      } else {
+        inc(+1)
+      }
   }
+
+
+
+
 
   func handleSwipes(sender:UISwipeGestureRecognizer) {
     // up or down
@@ -144,7 +147,7 @@ class ViewController: UIViewController {
 
 extension UIPanGestureRecognizer {
 
-  func isUp(circleView: UIView) -> Bool {
+  func isDown(circleView: UIView) -> Bool {
     let velocity : CGPoint = velocityInView(circleView)
     if velocity.y < 0 {
       print("ex Gesture went up")
